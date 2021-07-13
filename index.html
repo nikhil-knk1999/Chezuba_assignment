@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .highlight{
+      background-color: yellow;
+    }
+    .fa{
+      color: red;
+    }
+    #for {
+      background-color: rgb(151, 151, 151);
+    }
+    #fresh{
+      background-color: rgb(219, 219, 219);
+    }
+    .norm{
+      color: rgb(252, 250, 161);
+    }
+    .bot{
+      background-color: black;
+    }
+    .bot:hover{
+      background-color: whitesmoke;
+    }
+    .container1{
+      background-color: grey;
+    }
+    .tab:hover{
+      text-decoration: solid;
+      text-shadow: green;
+      color: green;
+    }
+    .ref {
+      margin-left: 50%;
+      background-color: black;
+    }
+      .active {
+          color: red;
+      }
+    .line {
+      background-color: black;
+      color: red;
+      display: inline;
+    }
+    .loader {
+        border: 6px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 6px solid #3498db;
+        width: 50px;
+        height: 50px;
+        -webkit-animation: spin 2s linear infinite; /* Safari */
+        animation: spin 2s linear infinite;
+      }
+      
+      /* Safari */
+      @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+  </style>
+  <title>Book List</title>
+</head>
+<body>
+  <div class="container container1">
+    <table class="u-full-width">
+        <tr class="norm">
+          <th> <span onclick="entryPoint3()"> <button class="bot"><h3 class="tab norm" id = "third">  Thirds</h3></button> </span> </th>
+          <th ><span onclick="entryPoint5()"> <button class="bot"> <h3 class="tab norm" id = "fifth"> Fifths </h3></button></span> </th>
+          <th ><span onclick="entryPointm()"> <button class="bot"> <h3 class="tab norm" id = "magic">  Magic </h3></button></span> </th>
+        </tr>
+    </table>
+  </div>
+  <div class="container container2">
+    <table id = "for" class="u-full-width">
+        <tr>
+          <th>ID</th>
+          <th>User-Id</th>
+          <th>Title <button class="ref active" onclick="ref()">refresh list <i style="font-size:24px" class="fa">&#xf021;</i></button> </th>
+          <th><input type="text"  id = "query" placeholder="query string"><button onclick="queryString()" class = "line" type="submit">submit</button></th>
+        </tr>
+      <!-- <tbody id="book-list3"></tbody> -->
+    </table>
+    <div id = "loader" class="loader"></div>
+    <!-- ............................................... -->
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
